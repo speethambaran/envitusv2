@@ -1,0 +1,62 @@
+@import '../../styles/index.scss';
+
+.dot {
+    height: 13px;
+    width: 13px;
+    background-color: #264f17;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    animation: glow 1s infinite alternate;
+}
+
+.dot-active {
+    height: 17px;
+    width: 17px;
+    border: 3px solid white;
+}
+
+.spots3d {
+    height: 13px;
+    width: 13px;
+    background-color: #264f17;
+    border-radius: 50%;
+    display: block;
+    border: none;
+    box-sizing: border-box;
+    animation: glow 1s infinite alternate;
+    --min-hotspot-opacity: 0;
+}
+
+.spots3d-active {
+    border: 2px solid white;
+}
+
+.post {
+    opacity: 0.5;
+    display: inline-block;
+    position: absolute;
+    height: 2rem;;
+}
+
+.post-active {
+    animation: pBox 1s infinite alternate;
+}
+
+@keyframes glow {
+    to {
+        background-color: #51ff0d;;
+    }
+}
+
+@keyframes borderGlow {
+    to {
+        border: 1px solid #51ff0d;;
+    }
+}
+
+@keyframes pBox {
+    to {
+        opacity: 1;
+    }
+}

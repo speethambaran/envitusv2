@@ -1,0 +1,28 @@
+.sidenav {
+    overflow-x: hidden;
+    border: 1px solid #eaecef;
+    border-radius: 5px;
+  }
+  
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #1b1f23;
+    display: block;
+    border-bottom: 1px solid #eaecef;
+  }
+  
+  .sidenav a:hover {
+    color: #064579;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  .active-tab{
+    border-left: orange 3px solid;
+    color: #72A521 !important;
+  }

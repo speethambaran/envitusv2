@@ -1,0 +1,23 @@
+@import '../../../styles/index.scss';
+
+.loc {
+    height: 13px;
+    width: 13px;
+    background-color: #264f17;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    animation: glow 1s infinite alternate;
+}
+
+.loc-active {
+    height: 17px;
+    width: 17px;
+    border: 3px solid white;
+}
+
+@keyframes glow {
+    to {
+        background-color: #51ff0d;;
+    }
+}
