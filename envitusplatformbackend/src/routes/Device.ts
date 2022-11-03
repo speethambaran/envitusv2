@@ -9,7 +9,7 @@ import {
     getDeviceIds, processDeviceData,
     getLiveData, getStatistics,
     getRawData, restoreDevice, deleteDevicePermanently
-} from '@controllers';
+} from '../controllers';
 
 const router = Router();
 

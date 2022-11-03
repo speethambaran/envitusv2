@@ -2,11 +2,11 @@ import { Request, Response } from 'express';
 import { StatusCodes } from "http-status-codes";
 import { SensorTypes } from "../models/SensorTypes";
 import { SensorParameters } from "../models/SensorParameters";
-import { getPagination } from '@utils';
+import { getPagination } from '../utils';
 import { Types } from 'mongoose';
 import { validationResult } from 'express-validator';
 import { Devices } from '../models/Devices';
-import { SensorSpec } from '@helpers';
+import { SensorSpec } from '../helpers';
 
 
 /**

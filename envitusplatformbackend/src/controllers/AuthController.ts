@@ -5,7 +5,7 @@ import { User } from '../models/Users';
 import { StatusCodes } from 'http-status-codes';
 import {
     JwtService
-} from '@utils';
+} from '../utils';
 const jwtService = new JwtService();
 
 /**

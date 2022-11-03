@@ -3,7 +3,7 @@ import { StatusCodes } from "http-status-codes";
 import { User } from "../models/Users";
 import bcrypt from 'bcryptjs';
 import { validationResult } from 'express-validator';
-import { getPagination } from '@utils';
+import { getPagination } from '../utils';
 
 /**
  * List -  User

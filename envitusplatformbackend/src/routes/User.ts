@@ -5,7 +5,7 @@ import {
     editUser, updateUserDetails,
     getUserDetails, updateUserPassword,
     getUserDetailsById, getUserIds, deleteUser
-} from '@controllers';
+} from '../controllers';
 import { auth } from '../middlewares/Auth';
 
 const router = Router();

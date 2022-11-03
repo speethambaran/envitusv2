@@ -4,7 +4,7 @@ import { StatusCodes } from 'http-status-codes';
 import { ApiKey } from '../models/ApiKey';
 import { v4 as uuidv4 } from 'uuid';
 import { Types } from 'mongoose';
-import { getPagination } from '@utils';
+import { getPagination } from '../utils';
 import schedule from 'node-schedule';
 
 /**

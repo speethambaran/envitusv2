@@ -3,8 +3,8 @@ import { validationResult } from 'express-validator';
 import { StatusCodes } from 'http-status-codes';
 import { Calibration } from '../models/Calibration';
 import { Types } from 'mongoose';
-import { getPagination } from '@utils';
-import { getDeviceId } from '@controllers';
+import { getPagination } from '../utils';
+import { getDeviceId } from '../controllers';
 const fs = require('fs');
 const path = require('path');
 

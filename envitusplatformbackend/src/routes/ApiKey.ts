@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import { validate } from '../middlewares/Validation';
 import { auth } from '../middlewares/Auth';
-import { addApiKey, updateApiKey, listApiKey, getApiKeyDetails, deleteApiKey } from '@controllers';
+import { addApiKey, updateApiKey, listApiKey, getApiKeyDetails, deleteApiKey } from '../controllers';
 
 const router = Router();
 

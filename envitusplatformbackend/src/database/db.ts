@@ -1,8 +1,9 @@
 import mongoose from 'mongoose';
-import { logger as Logger } from '@utils';
-import { seedUsers, seedPreferences } from '@controllers';
+import { logger as Logger } from '../utils';
+import { seedUsers, seedPreferences } from '../controllers';
 
-const DB_URL = String(process.env.DB_URL);
+// const DB_URL = String(process.env.DB_URL) || "mongodb://localhost:27017/envitus_patna_dev";
+const DB_URL = "mongodb://localhost:27017/envitus_patna_dev"
 mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 mongoose.set('autoIndex', true);

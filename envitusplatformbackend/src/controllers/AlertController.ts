@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { getRules } from './AlarmRuleController';
 import { Alert } from '../models/Alerts';
-import { getPagination } from '@utils';
+import { getPagination } from '../utils';
 import { socketEmit } from '../utils/SocketService';
 import { StatusCodes } from 'http-status-codes';
 import { postAlertsToUrls } from './WebhookController';

@@ -1,10 +1,10 @@
-import { getPagination } from '@utils';
+import { getPagination } from '../utils';
 import { Request, Response } from 'express';
 import { validationResult } from 'express-validator';
 import { StatusCodes } from 'http-status-codes';
 import { Types } from 'mongoose';
 import { Devices } from "../models/Devices";
-import { userDetails, sensorTypeDetails } from '@controllers';
+import { userDetails, sensorTypeDetails } from '../controllers';
 import { Preferences } from '../models/Preferences';
 
 /**

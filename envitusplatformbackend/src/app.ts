@@ -1,11 +1,10 @@
 import express from 'express';
 import logger from 'morgan';
 import helmet from 'helmet';
-// test
 import {
     logger as Logger, calculateHourlyAqi,
     resetAllLimits, resetFrequency, socketConnection
-} from '@utils';
+} from './utils';
 import { Request, Response } from 'express';
 import cors from 'cors';
 import BaseRouter from './routes';
@@ -48,7 +47,7 @@ app.get('/v1.0/health', (req: Request, res: Response) => {
     })
 });
 
-const port = Number(process.env.PORT || 3000);
+const port = Number(process.env.PORT || 5000);
 
 app.get('*', function (req, res) {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));

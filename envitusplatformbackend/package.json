@@ -79,7 +79,7 @@
     "@types/uuid": "^8.3.0",
     "find": "^0.3.0",
     "jasmine": "^3.6.3",
-    "nodemon": "^2.0.1",
+    "nodemon": "^2.0.20",
     "shipit-cli": "^5.3.0",
     "shipit-deploy": "^5.3.0",
     "supertest": "^6.0.0",
@@ -90,6 +90,7 @@
     "typescript": "^3.7.2"
   },
   "scripts": {
+    "start": "nodemon ./src/app.ts",
     "lint": "tslint --project \"tsconfig.json\"",
     "test": "nodemon --config \"./scripts/nodemon.test.json\"",
     "start-dev": "nodemon --config \"./scripts/nodemon.json\"/",

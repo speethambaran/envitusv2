@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { StatusCodes } from "http-status-codes";
-import { getPagination } from '@utils';
+import { getPagination } from '../utils';
 import { validationResult } from 'express-validator';
 import { Webhook } from '../models/Webhooks';
 import { Types } from 'mongoose';

@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import { StatusCodes } from 'http-status-codes';
-import { JwtService } from '@utils';
+import { JwtService } from '../utils';
 import { livedataApiLimit } from '../utils/apiRateLimit';
 
 const jwtService = new JwtService();

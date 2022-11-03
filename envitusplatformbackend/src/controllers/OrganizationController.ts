@@ -1,4 +1,4 @@
-import { getPagination } from '@utils';
+import { getPagination } from '../utils';
 import { Request, Response } from 'express';
 import { validationResult } from 'express-validator';
 import { StatusCodes } from 'http-status-codes';

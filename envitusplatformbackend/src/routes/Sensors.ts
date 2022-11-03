@@ -7,7 +7,7 @@ import {
     addSensorSpec, listSensorSpec, updateSensorSpec,
     getSensorSpecDetails, deleteSensorSpec, listSensorSpecIds,
     listSensorTypeIds, getSensorParameters
-} from '@controllers';
+} from '../controllers';
 
 const router = Router();
 

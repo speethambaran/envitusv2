@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { validationResult } from 'express-validator';
 import { StatusCodes } from 'http-status-codes';
-import { deviceDetails, getDeviceLastData, getDeviceLastHourAQI } from '@controllers';
+import { deviceDetails, getDeviceLastData, getDeviceLastHourAQI } from '../controllers';
 import mongoose from "mongoose";
 
 /**

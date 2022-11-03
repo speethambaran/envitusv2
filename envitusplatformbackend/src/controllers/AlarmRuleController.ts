@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { StatusCodes } from "http-status-codes";
 import { AlarmRule } from '../models/AlarmRule';
-import { getPagination } from '@utils';
+import { getPagination } from '../utils';
 import { validationResult } from 'express-validator';
 import mongoose from '../database/db';
 import { Devices } from '../models/Devices';

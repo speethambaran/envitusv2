@@ -2,10 +2,10 @@ import { Request, Response } from 'express';
 import { validationResult } from 'express-validator';
 import { SensorData } from '../models/SensorData';
 import { Types } from 'mongoose';
-import { getPagination } from '@utils';
+import { getPagination } from '../utils';
 import { StatusCodes } from 'http-status-codes';
-import { SensorSpec } from '@helpers';
-import { deviceDetails, getDeviceLastHourAQI } from '@controllers';
+import { SensorSpec } from '../helpers';
+import { deviceDetails, getDeviceLastHourAQI } from '../controllers';
 
 /**
  * Get device livedata

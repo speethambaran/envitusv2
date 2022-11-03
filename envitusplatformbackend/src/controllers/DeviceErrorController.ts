@@ -1,10 +1,10 @@
-import { getPagination } from '@utils';
+import { getPagination } from '../utils';
 import { Request, Response } from 'express';
 import { validationResult } from 'express-validator';
 import { StatusCodes } from 'http-status-codes';
 import { Types } from 'mongoose';
 import { DeviceErrors } from '../models/DeviceErrors';
-import { Errors, typeOneErr, systemErr } from '@helpers';
+import { Errors, typeOneErr, systemErr } from '../helpers';
 
 /**
  * Get device errors

@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { getActiveAlarms, updateAlert, getAlarmHistory, clearAllAlerts, clearAllAlertHistory } from '@controllers';
+import { getActiveAlarms, updateAlert, getAlarmHistory, clearAllAlerts, clearAllAlertHistory } from '../controllers';
 
 const router = Router();
 

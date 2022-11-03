@@ -1,7 +1,7 @@
 import { Router } from "express";
 import {
     addAlarmRule, listAlarmRule, editAlarmRule, deleteAlarmRule, getAlarmRuleDetails
-} from '@controllers';
+} from '../controllers';
 import { auth } from '../middlewares/Auth';
 
 const router = Router();

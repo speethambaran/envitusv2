@@ -1,13 +1,13 @@
 import { Request, Response } from 'express';
 import request from 'request';
-import { seedData, aqiCalculator } from '@utils';
+import { seedData, aqiCalculator } from '../utils';
 import { validationResult } from 'express-validator';
 import { StatusCodes } from 'http-status-codes';
-import { deviceDetails, handleDeviceErrors, generateAlerts } from '@controllers';
+import { deviceDetails, handleDeviceErrors, generateAlerts } from '../controllers';
 import { SensorData } from '../models/SensorData';
 import { SensorRawData } from '../models/SensorRawData';
 import { Types } from 'mongoose';
-import { SensorSpecExclude } from '@helpers';
+import { SensorSpecExclude } from '../helpers';
 import { Devices } from '../models/Devices';
 import { Aqi } from '../models/Aqi';
 import moment from 'moment';

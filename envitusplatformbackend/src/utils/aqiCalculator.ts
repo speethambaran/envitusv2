@@ -1,5 +1,5 @@
 import { Devices } from "../models/Devices";
-import { findAQIFromLiveData } from '@controllers';
+import { findAQIFromLiveData } from '../controllers';
 import { Types } from 'mongoose';
 import { SensorData } from '../models/SensorData';
 import 'moment-timezone';

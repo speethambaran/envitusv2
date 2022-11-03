@@ -4,7 +4,7 @@ import { auth } from '../middlewares/Auth';
 import {
     getPreferences, addPreferences, updatePreferences
 
-} from '@controllers';
+} from '../controllers';
 
 const router = Router();
 
