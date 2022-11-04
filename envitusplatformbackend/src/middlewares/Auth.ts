@@ -31,6 +31,7 @@ export const auth = (...allowed: String[]) => {
                     });
                 }
             } catch (error) {
+                console.log('ERROR : ', error)
                 return res.status(StatusCodes.UNAUTHORIZED).json({
                     status: 'failed',
                     message: "Authentication failed",

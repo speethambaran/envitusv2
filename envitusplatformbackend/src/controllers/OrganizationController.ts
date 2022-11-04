@@ -244,7 +244,7 @@ export const getOrganizationIds = (req: Request, res: Response) => {
         return res.status(StatusCodes.OK).json({
             success: true,
             message: "Data successfully retrieved",
-            organization_ids: ids[0] ? ids[0].organization || [] : []
+            organization_ids: ids ?  ids[0] ? ids[0].organization || [] : [] : []
         });
     })
 }
