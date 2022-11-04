@@ -65,10 +65,12 @@ export const usersList = (req: Request, res: Response) => {
  * @param   res
  */
 export const addUser = async (req: Request, res: Response) => {
+    console.log('BODY : ',req.body)
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
         return res.status(StatusCodes.UNPROCESSABLE_ENTITY).json({ success: false, "errors": errors.array({ onlyFirstError: true }) });
     }
+    
     const { name, password, role, username, email } = req.body;
     const user = new User({
         name: name,

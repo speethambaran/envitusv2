@@ -216,6 +216,7 @@ export const deleteOrganization = (req: Request, res: Response) => {
 * @param   res
 */
 export const getOrganizationIds = (req: Request, res: Response) => {
+
     const pipeline: any = [
         {
             $match: { _id: Types.ObjectId(req.body.user_id) }
@@ -237,11 +238,13 @@ export const getOrganizationIds = (req: Request, res: Response) => {
             }
         }
     ]
+
     User.aggregate(pipeline, function (err: any, ids: any) {
+        console.log('IDS : ',ids)
         return res.status(StatusCodes.OK).json({
             success: true,
             message: "Data successfully retrieved",
-            organization_ids: ids[0].organization || []
+            organization_ids: ids[0] ? ids[0].organization || [] : []
         });
     })
 }

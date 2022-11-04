@@ -13,21 +13,24 @@ export const auth = (...allowed: String[]) => {
         let apiKey: any;
         if (req.headers.authorization) {
             try {
-                token = req.headers.authorization.split(" ");
-                const userData = await jwtService.decodeJwt(token[1]);
-                if (isAllowed(userData.user_role)) {
+                let userToken = req.headers.authorization
+                const tokenRegex = /Bearer\s(?<token>.*)/i
+                token = tokenRegex.test(userToken) ? tokenRegex.exec(userToken): ''
+                
+                const userData = await jwtService.decodeJwt(token.groups.token);
+                
+                if (isAllowed(userData.user_role)){
                     req.body.user_id = userData.user_id;
                     req.body.user_role = userData.user_role;
                     next();
-                } else {
+                }else{
                     return res.status(StatusCodes.UNAUTHORIZED).json({
                         status: 'failed',
                         message: "Authentication failed",
                         error: "Permission denied",
                     });
                 }
-            }
-            catch (err) {
+            } catch (error) {
                 return res.status(StatusCodes.UNAUTHORIZED).json({
                     status: 'failed',
                     message: "Authentication failed",

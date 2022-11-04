@@ -15,7 +15,8 @@ export class JwtService {
 
 
     constructor() {
-        this.secret = (process.env.JWT_SECRET || randomString.generate(100));
+        // this.secret = (process.env.JWT_SECRET || randomString.generate(100));
+        this.secret = process.env.JWT_SECRET || 'something secret'
         this.options = {
             issuer: 'alcodex.com'
         };
@@ -44,6 +45,7 @@ export class JwtService {
     public decodeJwt(jwt: string): Promise<ClientData> {
         return new Promise((res, rej) => {
             jsonwebtoken.verify(jwt, this.secret, (err, decoded) => {
+                console.log('ERROR : ', err)
                 return err ? rej(this.VALIDATION_ERROR) : res(decoded as ClientData);
             });
         });
